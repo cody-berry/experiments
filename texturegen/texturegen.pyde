@@ -10,7 +10,7 @@
 
 def setup():
     global pg
-    size(256, 256)
+    size(32, 32)
     
     # If we don't use createGraphics() to do this, because save doesn't save transparency,
     # we need to use createGraphics. createGraphics is completely transparent, and saving
@@ -20,8 +20,9 @@ def setup():
             
 def draw():
     global pg
+    background(0)
     
-    r = width/2 # The radius of this sphere-like particle texture
+    r = width/2 # The radius of the texture
     cx = width/2 # The x-coordinate of the center of the particle texture
     cy = height/2 # The y-coordinate of the center of the particle texture
     
@@ -40,8 +41,8 @@ def draw():
             pg.point(i, j)
     pg.endDraw()
     
-    background(0)
+    
     # To show our texture, we need to draw an image of pg.
     image(pg, 0, 0)
     noLoop()
-                                
+    pg.save("texture.png")
