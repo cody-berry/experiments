@@ -10,7 +10,7 @@
 
 def setup():
     global pg
-    size(32, 32)
+    size(256, 256)
     
     # If we don't use createGraphics() to do this, because save doesn't save transparency,
     # we need to use createGraphics. createGraphics is completely transparent, and saving
